@@ -1,0 +1,114 @@
+
+@import url(http://fonts.googleapis.com/css?family=Nothing+You+Could+Do|Shadows+Into+Light|Open+Sans);
+body {
+    background: #FFFEf9;
+    height: 100%;
+    margin:0;
+    padding:0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 11pt;
+    color: #342826;
+    line-height: 1.4em;
+
+}
+
+fieldset {
+    width: 650px;
+    margin: 15px auto;
+    border: 4px solid #33605E;
+    background: #f1f1f1;
+    border-radius: 20px; -webkit-border-radius: 20px;
+    -webkit-box-shadow: 2px 2px 4px #888; -moz-box-shadow: 2px 2px 4px #888; 
+    box-shadow: 2px 2px 4px #888;
+    padding: 0px;
+}
+
+fieldset p {
+    margin-left: 15px;
+}
+
+legend {
+    padding: 6px !important;
+    margin-left: 10px;
+    font-family: 'Shadows Into Light', cursive;
+    color: #871A1D;
+    font-size: 15pt;
+    font-weight: bold;
+}
+label span, input.text, input.small, input.city, label a, label div, input.btn, label.signup_submit input {
+    float: left;
+}
+
+label {
+    margin: 0 auto;
+    height: 25px;
+    padding: 8px 0;
+    display: block;
+    clear: both;
+}
+
+label.inline {
+    display: inline;
+}
+
+label span {
+    width: 150px;
+    text-align: right;
+    padding-right: 12px;
+    padding-top: 6px;
+}
+
+label div.error {
+    width: auto;
+    text-align: left;
+    padding-left: 12px;
+    padding-top: 6px;
+    color: red;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+
+input.text, textarea.text, select, radio {
+    padding: 4px;
+    margin-top: 2px;
+    width: 200px;
+    font-size:11pt;
+}
+
+textarea.text {
+    font-style: italic;
+}
+
+input.check {
+    margin-top: 10px;
+}
+
+div.clear {
+    clear: both;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+div.clear hr {
+    margin: 15px 0px;
+    height: 1px;
+    width: 100%;
+    float: none;
+    border: none;
+    background: rgba(51, 96, 94, 0.24);
+}
+
+div.submit {
+    float: left;
+    display: inline;
+    margin:0px 0px 15px 15px; 
+}
+
+div.signup {
+    float: right;
+    display: inline;
+    margin: 0px 15px 15px 0px;
+    font-size: 80%;
+}

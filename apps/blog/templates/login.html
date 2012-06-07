@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Login</title>
+
+        <link href="/css/signup.css" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body>
+
+        <form method="post">
+            <fieldset>
+
+                <legend>Login</legend>
+
+                <p>Plese enter a valid user name and password:</p>
+
+                <label>
+                    <span>Username:</span>
+                    <input type="text" name="username" class="text" />
+                    <div class="error">{{error}}</div>
+                </label>
+
+                <label>
+                    <span>Password:</span>
+                    <input type="password" name="password" class="text" />
+                    
+                </label>
+                
+                <label>
+                    <input type="checkbox" name="persist" class="check" />
+                    <span>Remain logged in?</span>
+                </label>
+                
+                <div class="clear">
+                    <hr />
+                </div>
+
+
+
+                <div class="submit">
+                    <input type="submit" value="Submit"  />
+                </div>
+                
+                <div class="signup">
+                    Not a member?  <a href="/blog/signup">Sign-up now!</a>
+                </div>
+                
+            </fieldset>
+        </form>
+    </body>
+</html>

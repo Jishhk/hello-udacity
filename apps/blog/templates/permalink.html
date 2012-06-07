@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <title>{{post.subject}} | Josh's Blog</title>
+        
+        <link href="/css/main.css" type="text/css" rel="stylesheet" />
+        
+        <script type="text/javascript">
+            function deletepost() {
+                var a = confirm("Are you sure you want to delete the post?");
+                if (a === true) {
+                    password = prompt("Please enter the delete password:");
+                    delete_form = document.forms["delete"];
+                    delete_form.elements["password"].value = password
+                    delete_form.submit()
+                }
+            }
+            
+            function getUrlVars() {
+                var vars = {};
+                var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+                    vars[key] = value;
+                });
+                return vars;
+            }
+
+            
+            var a = getUrlVars()["deleted"];
+            var id = getUrlVars()["id"];
+            if (a === "false") {
+                alert("The password you supplied was not correct. Try again");
+                window.location = "/blog/"+id;
+            }
+            
+        </script>
+        <script type="text/javascript" src="http://gettopup.com/releases/latest/top_up-min.js"></script>
+    </head>
+    
+    <body>
+        <h1>{ <a href="/blog">Josh's Udacity Blog</a> }</h1>
+        
+        
+        
+        
+                
+                <div class="post">
+                    <h3>{{post.subject|e}} <span>{{post.created.strftime("%B %d, %Y")}}</span></h3>
+                    <div class="permalink">
+                        <a href="javascript:deletepost()">Delete Post</a>
+                        |
+                        <a href="/blog/{{post.key().id()}}/edit" class="popup">Edit Post</a>
+                    </div>
+                    
+                <div class="content">{{post.markdown()|safe}}</div>
+                </div>
+            
+        
+        <div id="footer">
+            <form name="delete" id="delete" method="post">
+                <input type="hidden" name="password" value="">
+                
+            </form>
+            <div id="queried">queried {{queried}} seconds ago</div>
+        </div>
+        
+        
+        <script type="text/javascript">
+            TopUp.addPresets({
+                ".popup": {
+                effect: "hide", 
+                type: "iframe", 
+                width: 700, 
+                height: 700, 
+                shaded: 1, 
+                resizeable: 0,
+                onclose: function() {window.location.reload();}
+                }
+            });
+        </script>
+    </body>
+
+</html>
+

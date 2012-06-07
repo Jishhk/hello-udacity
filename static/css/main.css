@@ -1,0 +1,232 @@
+@import url(http://fonts.googleapis.com/css?family=Rosarivo:400,400italic);
+
+body {
+    font-family: "Rosarivo", serif;
+    width: 700px;
+    margin: 0 auto;
+    padding: 10px;
+    color: #333;
+}
+
+.error {
+    color: red;
+}
+
+label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 600px;
+    font-size: 20px;
+    padding: 2px;
+    font-family: "Garamond", serif;
+}
+
+textarea {
+    width: 600px;
+    height: 200px;
+    font-size: 17px;
+    font-family: "Garamond", serif;
+}
+
+input[type="submit"] {
+    font-size: 15px;
+}
+
+hr {
+    margin: 20px auto;
+}
+
+.post {
+    margin-top: 80px;
+}
+
+
+.login-area {
+    float:right;
+    margin-top: 30px;
+    font-size: 12px;
+    color: gray;
+}
+
+.login-area a {
+    font-size: 12px;
+    font-style: italic;
+    color: gray;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out;
+}
+
+.login-area a:hover {
+    -webkit-transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out;
+    color: #333;
+    text-shadow: 0px 0px 20px #333;
+}
+
+h1 a,h5 a {
+    text-decoration: none;
+    color: inherit;
+    -webkit-transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out;
+}
+
+h1 a:hover, h5 a:hover {
+    -webkit-transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out;
+    text-shadow: 1px 1px 35px #333;
+}
+
+h1 span {
+    font-size: 14px;
+}
+
+.post h3 {
+    font-weight: bold;
+    font-size: 20px;
+    border-bottom: 4px solid #999;
+    margin-bottom: 5px;
+    font-variant: small-caps;
+    text-shadow: 0px 0px 40px #333;
+}
+
+.post h3 span {
+    float: right;
+    font-size: 14px;
+    padding-top: 8px;
+    font-style: italic;
+    font-weight: normal;
+    font-variant: normal;
+}
+
+.permalink {
+    text-align: right;
+}
+
+.permalink a {
+    font-size: 12px;
+    font-style: italic;
+    color: gray;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out;
+}
+
+.permalink a:hover {
+    -webkit-transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out;
+    color: #333;
+    text-shadow: 0px 0px 20px #333;
+}
+
+.content {
+    margin-top: 40px;
+    font-size: 12pt;
+    padding: 10px;
+    background: #E4DFDF;
+    box-shadow: 0px 0px 10px #888; -webkit-box-shadow: 0px 0px 10px #888;
+    word-wrap: break-word;
+}
+.content p {
+    margin: 0px;
+}
+.content p + p {
+    margin:0;
+    margin-top:25px;
+}
+
+.content blockquote {
+    font-style: italic;
+    font-size: 16px;
+    border-left: 3px solid #999;
+    padding-left: 5px;
+    text-shadow: 0px 0px 30px #555;
+}
+
+.content hr {
+    border: none;
+    background: #C5C5C5;
+    height: 1px;
+    width: 103%;
+    margin-left: -10px;
+}
+
+.normal {
+    white-space: normal;
+}
+
+.content ul {
+    margin:0;
+    list-style: none;
+    margin-left: -20px;
+}
+
+.content ul li::before {
+    content: "\00BB \0020";
+}
+
+.content ul li a{
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out;    
+}
+
+.content ul li a:visited{
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out;    
+}
+.content ul li a:hover{
+    -webkit-transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out;
+    color: #333;
+    text-shadow: 0px 0px 20px #333;
+}
+
+#footer {
+    height: 30px;
+    margin-top:100px;
+    padding-top: 5px;
+    border-top: 1px solid #888;
+}
+
+#queried {
+    float:right;
+    width: 300px;
+    text-align: right;
+    color: #777;
+    font-size: 9pt;
+}
+
+/*Tooltip css */
+#tt {
+    position:absolute;
+    display: block;
+    padding:8px;
+    border-radius: 10px 0px 10px 10px;
+    background: #555;
+}
+
+
+#ttcont {
+    display:block;
+    background: #555;
+    color: #fff;
+    font-size: 9pt;
+}
+
+#ttcont ul {
+    margin:0px;
+    margin-left: -15px;
+}
+
+.tooltip {
+    color:#862222; 
+    padding-bottom:1px; 
+    border-bottom:1px dotted #900; 
+    cursor:pointer;
+    font-size: 55%;
+    margin-left:400px;
+}
+

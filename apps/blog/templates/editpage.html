@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <title>Edit Post | Josh's Blog</title>
+        
+        
+        <link href="/css/edit.css" type="text/css" rel="stylesheet" />
+       
+    </head>
+    
+    <body>
+        <h1>{ Edit Post }</h1>
+            <form method="post">
+                <label>    
+                    <div>Subject</div>
+                    <input type="text" name="subject" value="{{subject|e}}">
+                </label>
+                
+                <label>
+                    <div>Content 
+                        <span class="tooltip" onmouseover="tooltip.show('Markdown Basics:<br><br><ul><li>*italic* or _italic_</li><li>**bold** or __bold__</li><li><b>link</b>:[text](http://url.com/)</li><li>numbered list: 1. Foo 2. Bar</li><li>to add a line break simiply add two spaces to where you would like the new line to be.</li><li>&gt; indicates blockquote</li><li>three or more * or - or _ will create a horizontal rule</ul>');" onmouseout="tooltip.hide();">
+                        Supports Markdown!
+                        </span>
+                    </div>
+                    <textarea name="content">{{content|safe}}</textarea>
+                </label>
+                
+                <label>
+                    <div>Password</div>
+                    <input type="password" name="password" value="">
+                </label>
+                
+                <div class="error">{{error}}</div>
+                
+                <input type="submit">
+            </form>
+            
+        
+        <script type="text/javascript" language="javascript" src="/js/tooltip.js"></script>    
+    </body>
+
+</html>
+

@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Sign Up</title>
+
+        <link href="/css/signup.css" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body>
+
+        <form method="post">
+            <fieldset>
+
+                <legend>Sign Up</legend>
+
+                <p>Plese enter a valid user name and password.  The e-mail is optional.</p>
+
+                <label>
+                    <span>Username:</span>
+                    <input type="text" name="username" value="{{username}}" class="text" />
+                    <div class="error">{{user_error}}</div>
+                </label>
+
+                <label>
+                    <span>Password:</span>
+                    <input type="password" name="password" class="text" />
+                    <div class="error">{{pass_error}}</div>
+                </label>
+
+                <label>
+                    <span>Verify Password:</span>
+                    <input type="password" name="verify" class="text" />
+                    <div class="error">{{valid_error}}</div>
+                </label>
+
+                <label>
+                    <span>Email (optional):</span>
+                    <input type="text" name="email" value="{{email}}" class="text" />
+                    <div class="error">{{email_error}}</div>
+                </label>
+
+                <div class="clear">
+                    <hr />
+                </div>
+
+ 
+
+                <div class="submit">
+                    <input type="submit" value="Submit"  />
+                </div>
+                
+                <div class="signup">
+                    Already a member?  <a href="/blog/login">Log in now!</a>
+                </div>
+                
+                
+            </fieldset>
+        </form>
+    </body>
+</html>

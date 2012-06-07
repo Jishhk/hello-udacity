@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>/ascii/</title>
+        
+        <style type="text/css">
+            body {
+                font-family: sans-serif;
+                width: 850px;
+                margin: 0 auto;
+                padding: 10px;
+            }
+            
+            .error {
+                color: red;
+            }
+            
+            form {
+                width: 405px;
+                float: left;
+                display: inline;
+            }
+            
+            label {
+                display: block;
+                font-size: 20px;
+            }
+            
+            input[type="text"] {
+                width: 400px;
+                font-size: 20px;
+                padding: 2px;
+            }
+            
+            textarea {
+                width: 400px;
+                height: 200px;
+                font-size: 17px;
+                font-family: monospace;
+            }
+            
+            input[type="submit"] {
+                font-size: 24px;
+            }
+            
+            .map {
+                width: 380px;
+                float: left;
+                display: inline;
+                margin: 25px 0px 0px 35px;
+            }
+            
+            hr {
+                margin: 20px auto;
+            }
+            
+            .art + .art {
+                margin-top: 20px;
+            }
+            
+            .art h3 {
+                font-weight: bold;
+                font-size: 20px;
+                border-bottom: 1px solid black;
+            }
+            
+            .art-body {
+                margin: 0;
+                font-size: 17px;
+            }
+            
+            .clear {
+                clear: both;
+            }
+            
+            
+        </style>
+        
+    </head>
+    
+    <body>
+        <h1>/ascii/</h1>
+        
+        
+        <form method="post">
+            <label>    
+                <div>title</div>
+                <input type="text" name="title" value={{title}}>
+            </label>
+            
+            <label>
+                <div>art</div>
+                <textarea name="art">{{art}}</textarea>
+            </label>
+            
+            <div class="error">{{error}}</div>
+            
+            <input type="submit">
+        </form>
+        
+        <div class="map">
+        {% if img_url %}
+            <img src="{{img_url}}">
+        {% endif %}
+        </div>
+        
+        <div class="clear"></div>
+        
+        <hr>
+            {% for art in arts %}
+                
+                <div class="art">
+                    <h3>{{art.title}}</h3>
+                    
+                <pre class="art-body">{{art.art}}</pre>
+                </div>
+             {% endfor %}
+        
+        
+    </body>
+
+</html>
+

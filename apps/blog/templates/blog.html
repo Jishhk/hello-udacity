@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Josh's Blog</title>
+        
+        <link href="/css/main.css" type="text/css" rel="stylesheet" />
+        
+        <script type="text/javascript">
+            function getUrlVars() {
+                var vars = {};
+                var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+                    vars[key] = value;
+                });
+                return vars;
+            }
+
+            var first = getUrlVars()["deleted"];
+            if (first === "true") {
+                alert("The selected post has been successfully deleted.");
+                window.location = "/blog";
+            }
+
+            
+        </script>
+        <script type="text/javascript" src="http://gettopup.com/releases/latest/top_up-min.js"></script>
+
+    </head>
+    
+    <body>
+        <div class="login-area">
+            {{login | safe}}
+        </div>
+        
+        <h1>{ <a href="/blog">Josh's Udacity Blog</a> }</h1>
+        <h5>[<a href="/blog/newpost">Create a New Post</a>]</h5>
+        
+            {% for post in posts %}
+                <div class="post">
+                    <h3>{{post.subject|e}} <span>{{post.created.strftime("%B X%d, %Y").replace('X0','').replace('X','')}}</span></h3>
+                    <div class="permalink">
+                        <a href="/blog/{{post.key().id()}}">Permalink</a>
+                        | 
+                        <a href="/blog/{{post.key().id()}}/edit" class="popup">Edit Post</a>
+                    </div>
+                    
+                    <div class="content">{{post.markdown()|safe}}</div>
+                </div>
+            {% endfor %}
+        
+        <div id="footer">
+            <div id="queried">queried {{queried}} seconds ago</div>
+        </div>
+        
+        
+        <script type="text/javascript">
+            TopUp.addPresets({
+                ".popup": {
+                effect: "hide", 
+                type: "iframe", 
+                width: 700, 
+                height: 700, 
+                shaded: 1, 
+                resizeable: 0,
+                onclose: function() {window.location.reload();}
+                }
+            });
+        </script>
+    </body>
+
+</html>
+

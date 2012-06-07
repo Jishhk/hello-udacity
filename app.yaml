@@ -1,0 +1,70 @@
+application: jishhk
+version: 5
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+  
+########
+#static# 
+########
+
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+  
+- url: /css
+  static_dir: static/css
+  
+- url: /img
+  static_dir: static/img
+  
+- url: /js
+  static_dir: static/js
+  
+######
+#urls#
+######
+
+- url: /
+  script: main.app
+
+- url: /blog
+  script: apps.blog.blog.app
+
+- url: /blog/(newpost|[0-9]*|.json|flush)
+  script: apps.blog.blog.app 
+
+- url: /blog/[0-9]*.json
+  script: apps.blog.blog.app
+  
+- url: /blog/[0-9]*/(edit|editsuccess|.json)
+  script: apps.blog.blog.app
+  
+- url: /blog/(welcome|signup|login|logout)
+  script: apps.blog.signup.app
+
+- url: /asciichan
+  script: apps.asciichan.asciichan.app
+  
+- url: /rot13
+  script: apps.rot13.rot13.app
+  
+- url: .*
+  script: error.app
+
+  
+###########
+#libraries#
+###########
+
+libraries:
+- name: webapp2
+  version: "2.5.1"
+  
+- name: jinja2
+  version: latest
+  
+- name: markupsafe
+  version: latest

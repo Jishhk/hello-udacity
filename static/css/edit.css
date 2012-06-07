@@ -1,0 +1,12 @@
+@import url('/css/main.css');
+
+html {
+    width: 700px;
+    height: 700px;
+}
+
+body {
+    width: 620px;
+    background: white;
+    margin:0px auto;
+}
